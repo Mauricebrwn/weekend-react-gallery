@@ -15,7 +15,7 @@ const GalleryItem = ({item, getGalleryList}) => {
 
     const addlikes = (id) => {
         axios 
-        .put(`/gallery/likes/${id}`,)
+        .put(`/gallery/like/${id}`)
         .then((response) => {
             setLikes(likes + 1);
             getPhotos()
@@ -34,7 +34,7 @@ const GalleryItem = ({item, getGalleryList}) => {
             <p>{item.likes} Liked</p>    
         </div> 
         <div>
-        <button onClick={() => addLikes (item.id)}> Like</button>
+        <button onClick={() => addlikes (item.id)}> Like</button>
         </div>
         </>
         ) : (
@@ -43,7 +43,7 @@ const GalleryItem = ({item, getGalleryList}) => {
                 <p> {item.description} Liked</p>
             </div>
             <div>
-            <button onClick={() =>addLikes (item.id)}> Like</button>  
+            <button onClick={() =>addlikes (item.id)}> Like</button>  
             </div>
             </>
             )}

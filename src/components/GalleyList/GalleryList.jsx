@@ -12,4 +12,4 @@ function GalleryList({galleryData, getGalleryList}) {
     );
 }
 
-export default GalleryList ;
+export default GalleryList;

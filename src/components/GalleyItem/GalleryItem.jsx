@@ -38,10 +38,10 @@ const GalleryItem = ({item, getGalleryList}) => {
         ) : (
             <>
             <div onClick={handleFlipped}>
-                <p> {item.description}</p>
+                <p>{item.description}</p>
             </div>
             <div>
-                <button onClick={() =>addlikes (item.id)}> Like</button>
+            <p>{item.likes} Likes <button onClick={() => addlikes (item.id)}> Like</button></p>
             </div>
             </>
             )}

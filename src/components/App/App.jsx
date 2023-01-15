@@ -1,3 +1,4 @@
+//all neccessary imports to run
 import { useState, useEffect } from 'react';
 import React from 'react';
 import './App.css';
@@ -7,13 +8,14 @@ import axios from 'axios';
 function App() {
 
   const[galleryData, setGalleryData] = useState([]);
-
+//runs code one time when mounted to the DOM 
   useEffect (() => {
     getGalleryList();
-  },[]);
+  },[]);// empty array here is the stop sign
 
   const getGalleryList = () => {
     axios
+    //asking for the gallery data
     .get('gallery')
     .then((response) => {
       setGalleryData(response.data);
@@ -22,6 +24,7 @@ function App() {
       console.log(error, 'something broke in axios.get')
     });
   };
+  //the return shown on the DOM once loaded 
     return (
       <div className="App">
         <header className="App-header">

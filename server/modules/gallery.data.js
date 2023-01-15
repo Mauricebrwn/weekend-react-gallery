@@ -1,3 +1,5 @@
+//where the pictures live and are exported
+
 const galleryItems = [
     { id: 1, path: 'images/bella.jpeg', description: 'Bella at Forrest Hills 😁', likes: 0 },
     { id: 2, path: 'images/elli.jpeg', description: 'Elli at Forrest Hills 🏀', likes: 0 },

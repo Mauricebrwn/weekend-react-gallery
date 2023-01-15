@@ -18,7 +18,7 @@ const GalleryItem = ({item, getGalleryList}) => {
         .put(`/gallery/like/${id}`)
         .then((response) => {
             setLikes(likes + 1);
-            getPhotos()
+            getGalleryList()
         }).catch((err) => {
             console.log(err);
         })
@@ -29,7 +29,7 @@ const GalleryItem = ({item, getGalleryList}) => {
         <>
         {isFlipped ? (
             <>
-        <img img src={item.path} onClick={handleFlipped} style={{width:'100px', height: '100px'}}/>
+        <img img src={item.path} onClick={handleFlipped} style={{width:'300px', height: '375px'}}/>
         <div>
             <p>{item.likes} Liked</p>    
         </div> 
@@ -41,6 +41,11 @@ const GalleryItem = ({item, getGalleryList}) => {
             <>
             <div onClick={handleFlipped}>
                 <p> {item.description} Liked</p>
+            </div>
+            <div>
+                <p>
+                    {item.likes}
+                </p>
             </div>
             <div>
             <button onClick={() =>addlikes (item.id)}> Like</button>  

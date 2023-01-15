@@ -3,14 +3,34 @@
   padding: 2cm;
 }
 
+body {
+  background-color: bisque;
+}
+
 .App-header {
   background-color: #222;
   padding: 1em;
   color: white;
   margin-bottom: 1em;
+  font-size: 35px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 45px;
 }
+
+h2 {
+  font-size: 35px;
+}
+
+button {
+  font-size: 20px;
+  background-color: gold;
+  border-radius: 12px;
+}
+p {
+  font-size: 22px;
+}
+
+
 

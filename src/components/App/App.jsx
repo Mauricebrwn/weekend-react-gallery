@@ -25,7 +25,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 className="App-title">Gallery of My Everything!</h1>
         </header>
         <h2>The most important people in my life!</h2>
         <GalleryList galleryData={galleryData} getGalleryList= {getGalleryList} />

@@ -31,7 +31,7 @@ const GalleryItem = ({item, getGalleryList}) => {
             <>
         <img img src={item.path} onClick={handleFlipped} style={{width:'300px', height: '375px'}}/>
         <div>
-            <p>{item.likes} Liked</p>    
+            <p>{item.likes} Likes</p>    
         </div> 
         <div>
         <button onClick={() => addlikes (item.id)}> Like</button>
@@ -40,15 +40,10 @@ const GalleryItem = ({item, getGalleryList}) => {
         ) : (
             <>
             <div onClick={handleFlipped}>
-                <p> {item.description} Liked</p>
+                <p> {item.description}</p>
             </div>
             <div>
-                <p>
-                    {item.likes}
-                </p>
-            </div>
-            <div>
-            <button onClick={() =>addlikes (item.id)}> Like</button>  
+                <button onClick={() =>addlikes (item.id)}> Like</button>
             </div>
             </>
             )}

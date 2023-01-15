@@ -27,7 +27,7 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
+        <h2>The most important people in my life!</h2>
         <GalleryList galleryData={galleryData} getGalleryList= {getGalleryList} />
       </div>
     );

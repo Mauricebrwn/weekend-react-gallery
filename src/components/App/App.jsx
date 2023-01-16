@@ -16,7 +16,7 @@ function App() {
   const getGalleryList = () => {
     axios
     //asking for the gallery data
-    .get('gallery')
+    .get('/gallery')
     .then((response) => {
       setGalleryData(response.data);
     })

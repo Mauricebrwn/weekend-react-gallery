@@ -3,7 +3,7 @@ import {React, useState} from "react";
 // conditional rendering from true to false to flip the picture
 const GalleryItem = ({item, getGalleryList}) => {
     const [likes, setLikes] = useState(item.likes);
-    const [isFlipped, setIsFlipped] = useState (true);
+    const [isFlipped, setIsFlipped] = useState(true);
 
     const handleFlipped = () => {
         if (isFlipped === true) {
@@ -11,6 +11,7 @@ const GalleryItem = ({item, getGalleryList}) => {
         }else {
             setIsFlipped(true)
         }
+        // setIsFlipped(!isFlipped);
     }
 // the function for increasing likes on the DOM 
     const addlikes = (id) => {
@@ -29,7 +30,7 @@ const GalleryItem = ({item, getGalleryList}) => {
         <>
         {isFlipped ? (
             <>
-        <img img src={item.path} onClick={handleFlipped} style={{width:'300px', height: '375px'}}/>
+        <img src={item.path} onClick={handleFlipped} style={{width:'300px', height: '375px'}}/>
         <div>
             {/* set up on purpose for like button display on same line as likes display*/}
             <p>{item.likes} Likes <button onClick={() => addlikes (item.id)}> Like</button></p>
